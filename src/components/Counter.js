@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CounterControl from './CounterControl'
 import CounterOutput from './CounterOutput'
 import { connect } from 'react-redux'
+import * as actionTypes from '../store/actions'
 
 class Counter extends Component {
 
@@ -39,13 +40,13 @@ const mapStateToProps = state => {
 // maps the global dispatches to the properties of the component
 const mapDispatchToProps = dispatch => {
   return {
-    onIncrementCounter : () => dispatch({type : "INC_COUNTER"}),
+    onIncrementCounter : () => dispatch({type : actionTypes.INC_COUNTER}),
     // write the code for DEC_COUNTER
-    onDecrementCounter : () => dispatch({type : "DEC_COUNTER"}),
+    onDecrementCounter : () => dispatch({type : actionTypes.DEC_COUNTER}),
     // write the code to ADD_COUNTER
-    onAddCounter : () => dispatch({type : "ADD_COUNTER"}),
+    onAddCounter : () => dispatch({type : actionTypes.ADD_COUNTER}),
     // write code for SUBTRACT_COUNTER
-    onSubCounter : () => dispatch({type : "SUB_COUNTER"})
+    onSubCounter : () => dispatch({type : actionTypes.SUB_COUNTER})
   }
 }
 // link the props and dispatches to the component

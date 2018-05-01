@@ -1,4 +1,4 @@
-
+import * as actionTypes from './actions'
 const initialState = {
   counter : 123,
   firstName : 'john',
@@ -8,28 +8,28 @@ const initialState = {
 
 const reducer = (state = initialState,action) => {
 
-  if(action.type == "INC_COUNTER") {
+  if(action.type == actionTypes.INC_COUNTER) {
     return {
       ...state,
       counter : state.counter + 1
     }
   }
 
-  else if (action.type == "DEC_COUNTER") {
+  else if (action.type == actionTypes.DEC_COUNTER) {
     return {
       ...state,
       counter : state.counter - 1
     }
   }
 
-  else if (action.type == "ADD_COUNTER") {
+  else if (action.type == actionTypes.ADD_COUNTER) {
     return {
       ...state,
       counter : state.counter + 5
     }
   }
 
-  else if (action.type == "SUB_COUNTER") {
+  else if (action.type == actionTypes.SUB_COUNTER) {
     return {
       ...state,
       counter : state.counter - 5
